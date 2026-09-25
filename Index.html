@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynasty Tech Portal | Diagnostic & Support</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Navigation Header -->
+    <header class="app-header">
+        <div class="logo-container">
+            <h2>Dynasty<span>Tech</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#diagnostics">Diagnostics</a></li>
+                <li><a href="#request-service">Submit Request</a></li>
+                <li><a href="#system-status">System Status</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Section 1: Hero Banner -->
+        <section class="hero-section">
+            <h1>Hardware Diagnostic & Service Portal</h1>
+            <p>Run instant component checks or log system repair tickets for physical diagnostics.</p>
+        </section>
+
+        <!-- Section 2: Real-time System Status Card -->
+        <section id="system-status" class="card">
+            <h3>System Status Monitor</h3>
+            <div class="status-indicator">
+                <span class="dot online"></span>
+                <p id="status-text">Local Node: Operational</p>
+            </div>
+            <button id="run-diag-btn" class="btn primary-btn">Run Hardware Self-Check</button>
+        </section>
+
+        <!-- Section 3: Interactive Repair Request Form -->
+        <section id="request-service" class="card">
+            <h3>Submit Diagnostic Request</h3>
+            <form id="repair-form">
+                
+                <div class="form-group">
+                    <label for="client-name">Client / Owner Name</label>
+                    <input type="text" id="client-name" name="clientName" placeholder="Enter full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="device-type">Device Type</label>
+                    <select id="device-type" name="deviceType" required>
+                        <option value="" disabled selected>Select device type...</option>
+                        <option value="laptop">Laptop / Notebook</option>
+                        <option value="desktop">Desktop PC / Workstation</option>
+                        <option value="storage">Storage Drive (SSD/HDD Recovery)</option>
+                        <option value="mobile">Mobile Device / Tablet</option>
+                        <option value="other">Other Component</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="issue-description">Observed Issue / Fault Symptoms</label>
+                    <textarea id="issue-description" name="issueDescription" rows="4" placeholder="Describe boot errors, beep codes, blue screens, or power failures..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn success-btn">Log Request Ticket</button>
+            </form>
+        </section>
+
+        <!-- Section 4: Dynamic Ticket Log Output -->
+        <section class="card">
+            <h3>Logged Support Tickets</h3>
+            <div id="ticket-list">
+                <p class="empty-msg">No active tickets submitted yet.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 Dynasty Computers. Hardware & Software Systems.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

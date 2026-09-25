@@ -1,0 +1,1 @@
+console.log("Dynasty Tech Portal Engine loaded successfully.");
